@@ -1,0 +1,8 @@
+---
+description: Testing and regression expectations
+alwaysApply: true
+---
+- Add/update tests with behavior.
+- Existing valid tests are constraints.
+- Never delete, skip, or weaken valid tests merely to get green output.
+- Run focused verification then the broader relevant suite.

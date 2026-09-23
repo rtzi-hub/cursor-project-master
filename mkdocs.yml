@@ -1,0 +1,59 @@
+site_name: Cursor Project Master
+site_description: Guided production-engineering workflow for Cursor
+site_url: https://rtzi-hub.github.io/cursor-project-master/
+repo_url: https://github.com/rtzi-hub/cursor-project-master
+repo_name: rtzi-hub/cursor-project-master
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/code-braces
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - assets/stylesheets/app.css
+extra_javascript:
+  - assets/javascripts/app.js
+
+nav:
+  - Guided Setup: index.md
+  - Quick Start: getting-started.md
+  - Expert Reference:
+      - Product model: reference/product-model.md
+      - New-project workflow: reference/new-project.md
+      - Existing-project workflow: reference/existing-project.md
+      - AGENTS / Rules / Skills: reference/context.md
+      - Security & verification: reference/security.md
+  - Sources: references.md

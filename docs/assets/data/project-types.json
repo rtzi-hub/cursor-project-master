@@ -1,0 +1,504 @@
+{
+  "website": {
+    "label": "Website / Landing Page",
+    "icon": "🌐",
+    "plain_description": "A public site focused on content, design, SEO, accessibility, and performance.",
+    "examples": [
+      "Company website",
+      "Portfolio",
+      "Marketing site"
+    ],
+    "questions": [
+      "Who is the main audience?",
+      "What should visitors do?",
+      "Which pages are required?",
+      "Do you have a visual direction?",
+      "Will the site collect user information?"
+    ],
+    "architecture_focus": [
+      "information architecture",
+      "content ownership",
+      "SEO",
+      "accessibility",
+      "performance",
+      "forms/privacy",
+      "deployment"
+    ],
+    "security_focus": [
+      "form validation",
+      "dependency risk",
+      "privacy/analytics",
+      "deployment headers"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner"
+    ],
+    "scaffold": [
+      "src/components",
+      "src/pages-or-routes",
+      "src/styles",
+      "public",
+      "content",
+      "tests"
+    ]
+  },
+  "web-app": {
+    "label": "Web App / SaaS",
+    "icon": "💻",
+    "plain_description": "A browser product with user accounts, data, workflows, or dashboards.",
+    "examples": [
+      "SaaS product",
+      "Customer portal",
+      "Internal dashboard"
+    ],
+    "questions": [
+      "Who uses the product?",
+      "What are the most important user journeys?",
+      "Does it require accounts or roles?",
+      "What data must it store?",
+      "Which external services does it use?"
+    ],
+    "architecture_focus": [
+      "auth/session",
+      "authorization",
+      "API boundaries",
+      "state/data ownership",
+      "validation",
+      "background jobs",
+      "observability",
+      "deployment"
+    ],
+    "security_focus": [
+      "authentication",
+      "authorization",
+      "input validation",
+      "session handling",
+      "critical E2E journeys"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner",
+      "e2e"
+    ],
+    "scaffold": [
+      "apps/web",
+      "apps/api",
+      "packages",
+      "tests/unit",
+      "tests/integration",
+      "tests/e2e"
+    ]
+  },
+  "business-system": {
+    "label": "Customer / Business System",
+    "icon": "👥",
+    "plain_description": "An operational system for records, users, assignments, roles, statuses, or internal work.",
+    "examples": [
+      "CRM",
+      "Admin system",
+      "Operations portal"
+    ],
+    "questions": [
+      "Which users exist?",
+      "Which records/entities are managed?",
+      "Who may see each record?",
+      "Which status transitions exist?",
+      "Which actions must be audited?"
+    ],
+    "architecture_focus": [
+      "roles",
+      "data ownership",
+      "status/state machine",
+      "audit trail",
+      "search/listing",
+      "concurrency",
+      "exports",
+      "integrations"
+    ],
+    "security_focus": [
+      "role authorization",
+      "cross-user access",
+      "sensitive data",
+      "audit logging",
+      "concurrent updates"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner",
+      "e2e"
+    ],
+    "scaffold": [
+      "frontend",
+      "backend",
+      "tests/authorization",
+      "tests/integration",
+      "tests/e2e",
+      "scripts"
+    ]
+  },
+  "application": {
+    "label": "Mobile / Desktop Application",
+    "icon": "📱",
+    "plain_description": "An installed app for phone, tablet, or desktop.",
+    "examples": [
+      "Mobile app",
+      "Desktop app",
+      "Cross-platform client"
+    ],
+    "questions": [
+      "Which platforms?",
+      "Does it work offline?",
+      "What data is stored locally?",
+      "Which permissions are required?",
+      "How are releases delivered?"
+    ],
+    "architecture_focus": [
+      "platform lifecycle",
+      "API boundary",
+      "local state",
+      "secure storage",
+      "permissions",
+      "telemetry",
+      "updates"
+    ],
+    "security_focus": [
+      "local secret storage",
+      "API authentication",
+      "platform permissions",
+      "update integrity"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner",
+      "e2e"
+    ],
+    "scaffold": [
+      "src/app",
+      "src/domain",
+      "src/services",
+      "src/platform",
+      "tests/unit",
+      "tests/integration",
+      "tests/e2e"
+    ]
+  },
+  "api-service": {
+    "label": "API / Backend Service",
+    "icon": "🔌",
+    "plain_description": "A backend used by applications, clients, integrations, or webhooks.",
+    "examples": [
+      "REST API",
+      "Backend service",
+      "Webhook processor"
+    ],
+    "questions": [
+      "Who calls it?",
+      "Which endpoints/events are required?",
+      "How are callers authenticated?",
+      "Which operations must be idempotent?",
+      "What compatibility guarantees are required?"
+    ],
+    "architecture_focus": [
+      "contracts",
+      "validation",
+      "authn/authz",
+      "persistence",
+      "transactions",
+      "idempotency",
+      "rate limits",
+      "observability"
+    ],
+    "security_focus": [
+      "authentication",
+      "authorization",
+      "input validation",
+      "abuse/rate controls",
+      "idempotency"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner"
+    ],
+    "scaffold": [
+      "src/api",
+      "src/domain",
+      "src/services",
+      "src/persistence",
+      "src/integrations",
+      "tests/unit",
+      "tests/integration",
+      "tests/contract"
+    ]
+  },
+  "ai-automation": {
+    "label": "AI Agent / Automation",
+    "icon": "🤖",
+    "plain_description": "An agent, bot, workflow, scheduled automation, or tool-using AI system.",
+    "examples": [
+      "AI agent",
+      "Workflow automation",
+      "Scheduled bot"
+    ],
+    "questions": [
+      "What triggers it?",
+      "Which actions may it perform?",
+      "Which actions require human approval?",
+      "What state/memory persists?",
+      "How should retries, failures, and cost limits work?"
+    ],
+    "architecture_focus": [
+      "triggers",
+      "tool permissions",
+      "state/memory",
+      "approvals",
+      "retries",
+      "idempotency",
+      "audit trail",
+      "model/provider boundaries",
+      "cost controls"
+    ],
+    "security_focus": [
+      "tool permissions",
+      "untrusted input boundaries",
+      "secrets",
+      "human approvals",
+      "audit evidence"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner",
+      "docker"
+    ],
+    "scaffold": [
+      "src/agents",
+      "src/tools",
+      "src/workflows",
+      "src/policies",
+      "src/integrations",
+      "tests/unit",
+      "tests/integration",
+      "tests/safety"
+    ]
+  },
+  "data-pipeline": {
+    "label": "Data / Analytics Pipeline",
+    "icon": "📊",
+    "plain_description": "A system that ingests, transforms, validates, or moves data.",
+    "examples": [
+      "ETL/ELT pipeline",
+      "Analytics processing",
+      "Event pipeline"
+    ],
+    "questions": [
+      "What are the sources?",
+      "Where does data go?",
+      "What schemas must be preserved?",
+      "How do backfills work?",
+      "Which data-quality checks are required?"
+    ],
+    "architecture_focus": [
+      "schemas",
+      "lineage",
+      "batch/stream",
+      "checkpoints",
+      "idempotency",
+      "backfills",
+      "quality",
+      "observability",
+      "cost"
+    ],
+    "security_focus": [
+      "sensitive fields",
+      "data lineage",
+      "access controls",
+      "backfills",
+      "data quality"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner"
+    ],
+    "scaffold": [
+      "src/ingest",
+      "src/transform",
+      "src/load",
+      "src/schemas",
+      "src/quality",
+      "tests/unit",
+      "tests/integration",
+      "tests/data-quality"
+    ]
+  },
+  "infrastructure": {
+    "label": "Cloud / Infrastructure",
+    "icon": "☁️",
+    "plain_description": "Infrastructure-as-code, cloud resources, networking, IAM, or Kubernetes.",
+    "examples": [
+      "Terraform",
+      "Cloud platform",
+      "Kubernetes infrastructure"
+    ],
+    "questions": [
+      "Which platform?",
+      "Which environments?",
+      "Where is state stored?",
+      "Who may apply production changes?",
+      "How are drift/recovery handled?"
+    ],
+    "architecture_focus": [
+      "accounts/projects",
+      "environments",
+      "state",
+      "modules",
+      "IAM",
+      "networking",
+      "plan/apply policy",
+      "drift",
+      "rollback"
+    ],
+    "security_focus": [
+      "IAM least privilege",
+      "state protection",
+      "plan review",
+      "destructive actions",
+      "secret handling"
+    ],
+    "tools": [
+      "git",
+      "terraform",
+      "tflint",
+      "trivy",
+      "secret-scanner",
+      "shellcheck"
+    ],
+    "scaffold": [
+      "environments/dev",
+      "environments/staging",
+      "environments/prod",
+      "modules",
+      "policies",
+      "tests",
+      "scripts"
+    ]
+  },
+  "monorepo": {
+    "label": "Large Multi-App Project",
+    "icon": "🧩",
+    "plain_description": "Several apps, services, packages, and possibly infrastructure in one repository.",
+    "examples": [
+      "Web + API + packages",
+      "Multi-service product"
+    ],
+    "questions": [
+      "Which apps/services exist?",
+      "Which dependencies are allowed?",
+      "What is truly shared?",
+      "How are releases handled?",
+      "How should selective CI work?"
+    ],
+    "architecture_focus": [
+      "package boundaries",
+      "ownership",
+      "dependency direction",
+      "shared code",
+      "selective CI",
+      "versioning",
+      "nested agent instructions"
+    ],
+    "security_focus": [
+      "ownership boundaries",
+      "cross-package contracts",
+      "workflow permissions",
+      "shared secrets"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner"
+    ],
+    "scaffold": [
+      "apps",
+      "packages",
+      "infra",
+      "tests",
+      "tools"
+    ]
+  },
+  "generic": {
+    "label": "Something Else / Not Sure",
+    "icon": "✨",
+    "plain_description": "A library, CLI, prototype, or unusual project.",
+    "examples": [
+      "CLI",
+      "Library",
+      "Prototype"
+    ],
+    "questions": [
+      "Who/what uses it?",
+      "What is the key outcome?",
+      "What inputs?",
+      "What outputs?",
+      "What would make it unsafe or incorrect?"
+    ],
+    "architecture_focus": [
+      "boundaries",
+      "inputs/outputs",
+      "state",
+      "dependencies",
+      "verification",
+      "deployment"
+    ],
+    "security_focus": [
+      "secrets",
+      "dependencies",
+      "input boundaries",
+      "project-specific threats"
+    ],
+    "tools": [
+      "git",
+      "runtime",
+      "pre-commit",
+      "trivy",
+      "semgrep",
+      "secret-scanner"
+    ],
+    "scaffold": [
+      "src",
+      "tests",
+      "scripts",
+      "docs"
+    ]
+  }
+}

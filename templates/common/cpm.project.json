@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "project_type": "generic",
+  "summary": "",
+  "stack": {},
+  "components": [],
+  "directories": [],
+  "auth": {},
+  "data_stores": [],
+  "integrations": [],
+  "verification_commands": {},
+  "security_requirements": [],
+  "deployment": {},
+  "build_phases": [],
+  "unresolved_questions": []
+}

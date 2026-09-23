@@ -1,0 +1,71 @@
+{
+  "git": {
+    "label": "Git",
+    "level": "required",
+    "why": "Version control and safe checkpoints.",
+    "command": "git"
+  },
+  "runtime": {
+    "label": "Project runtime",
+    "level": "required when selected",
+    "why": "The runtime approved in architecture.",
+    "command": null
+  },
+  "pre-commit": {
+    "label": "pre-commit",
+    "level": "recommended",
+    "why": "Local guardrail orchestration.",
+    "command": "pre-commit"
+  },
+  "trivy": {
+    "label": "Trivy",
+    "level": "recommended",
+    "why": "Vulnerability, secret, and misconfiguration scanning.",
+    "command": "trivy"
+  },
+  "semgrep": {
+    "label": "Semgrep CE",
+    "level": "recommended",
+    "why": "Deterministic static analysis.",
+    "command": "semgrep"
+  },
+  "secret-scanner": {
+    "label": "TruffleHog or Gitleaks",
+    "level": "recommended",
+    "why": "Dedicated secret discovery.",
+    "commands": [
+      "trufflehog",
+      "gitleaks"
+    ]
+  },
+  "e2e": {
+    "label": "E2E test runner",
+    "level": "project-dependent",
+    "why": "Protect critical user journeys.",
+    "command": null
+  },
+  "docker": {
+    "label": "Docker",
+    "level": "often useful",
+    "why": "Reproducible runtime environments.",
+    "command": "docker"
+  },
+  "terraform": {
+    "label": "Terraform",
+    "level": "project",
+    "why": "Infrastructure-as-code runtime.",
+    "command": "terraform"
+  },
+  "tflint": {
+    "label": "TFLint",
+    "level": "project",
+    "why": "Terraform/provider-aware linting.",
+    "command": "tflint"
+  },
+  "shellcheck": {
+    "label": "ShellCheck",
+    "level": "useful",
+    "why": "Shell script analysis.",
+    "command": "shellcheck"
+  }
+}

@@ -1,0 +1,10 @@
+---
+description: Security and authority boundaries
+alwaysApply: true
+---
+- Never hardcode or print secrets.
+- Validate untrusted input.
+- Enforce authorization at the authoritative backend/data boundary.
+- Use least privilege.
+- Do not weaken security checks merely to make CI pass.
+- Production/destructive actions require explicit human authorization.

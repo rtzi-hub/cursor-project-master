@@ -1,0 +1,9 @@
+---
+description: Core repository constraints
+alwaysApply: true
+---
+- Read AGENTS.md before broad changes.
+- Prefer the smallest accepted change.
+- Reuse existing abstractions.
+- Avoid unrelated refactors.
+- Stop for unapproved architecture or contract changes.

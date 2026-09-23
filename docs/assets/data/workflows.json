@@ -1,0 +1,194 @@
+{
+  "milestones": [
+    {
+      "id": "discover",
+      "label": "Discover",
+      "icon": "\ud83d\udca1"
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "icon": "\ud83d\uddfa\ufe0f"
+    },
+    {
+      "id": "build",
+      "label": "Build",
+      "icon": "\ud83d\udee0\ufe0f"
+    },
+    {
+      "id": "prove",
+      "label": "Prove",
+      "icon": "\u2705"
+    },
+    {
+      "id": "launch",
+      "label": "Launch",
+      "icon": "\ud83d\ude80"
+    }
+  ],
+  "new": [
+    {
+      "id": "idea",
+      "milestone": "discover",
+      "title": "Describe your idea",
+      "app": "This guide",
+      "action": "answer"
+    },
+    {
+      "id": "architecture",
+      "milestone": "design",
+      "title": "Think through the architecture with AI",
+      "app": "AI Chat",
+      "mode": "Conversation",
+      "prompt": "architecture_coach",
+      "expects": [
+        "REQUIREMENTS.md",
+        "ARCHITECTURE.md",
+        "DECISIONS.md",
+        "ACCEPTANCE_CRITERIA.md",
+        "cpm.project.json"
+      ]
+    },
+    {
+      "id": "machine",
+      "milestone": "design",
+      "title": "Prepare your computer",
+      "app": "Terminal",
+      "action": "doctor"
+    },
+    {
+      "id": "agents",
+      "milestone": "design",
+      "title": "Teach Cursor how to work here",
+      "app": "Cursor",
+      "mode": "Plan",
+      "prompt": "new_agents",
+      "expects": [
+        "AGENTS.md",
+        ".cursor/rules/"
+      ]
+    },
+    {
+      "id": "roadmap",
+      "milestone": "design",
+      "title": "Turn the architecture into a build plan",
+      "app": "Cursor",
+      "mode": "Plan",
+      "prompt": "new_roadmap",
+      "expects": [
+        "TODO.md"
+      ]
+    },
+    {
+      "id": "scaffold",
+      "milestone": "build",
+      "title": "Create the approved project structure",
+      "app": "Terminal",
+      "action": "scaffold"
+    },
+    {
+      "id": "phase-loop",
+      "milestone": "build",
+      "title": "Build one phase at a time",
+      "app": "Cursor",
+      "mode": "Agent",
+      "prompt": "build_phase"
+    },
+    {
+      "id": "verify",
+      "milestone": "prove",
+      "title": "Prove the project works",
+      "app": "Terminal + Cursor",
+      "action": "inspect"
+    },
+    {
+      "id": "secure",
+      "milestone": "prove",
+      "title": "Run the security gate",
+      "app": "Terminal + Cursor",
+      "prompt": "security_review"
+    },
+    {
+      "id": "ship",
+      "milestone": "launch",
+      "title": "Review and ship",
+      "app": "GitHub",
+      "action": "ship"
+    }
+  ],
+  "existing": [
+    {
+      "id": "change",
+      "milestone": "discover",
+      "title": "Describe the change you want",
+      "app": "This guide",
+      "action": "answer"
+    },
+    {
+      "id": "baseline",
+      "milestone": "discover",
+      "title": "Protect the starting point",
+      "app": "Terminal",
+      "action": "baseline"
+    },
+    {
+      "id": "discover-repo",
+      "milestone": "design",
+      "title": "Understand the existing code before editing",
+      "app": "Cursor",
+      "mode": "Ask",
+      "prompt": "existing_discovery"
+    },
+    {
+      "id": "agents-existing",
+      "milestone": "design",
+      "title": "Teach Cursor the repository rules",
+      "app": "Cursor",
+      "mode": "Plan",
+      "prompt": "existing_agents",
+      "expects": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "id": "plan-change",
+      "milestone": "design",
+      "title": "Plan the smallest safe change",
+      "app": "Cursor",
+      "mode": "Plan",
+      "prompt": "blast_radius",
+      "expects": [
+        "CHANGE_PLAN.md"
+      ]
+    },
+    {
+      "id": "implement-change",
+      "milestone": "build",
+      "title": "Make the approved change",
+      "app": "Cursor",
+      "mode": "Agent",
+      "prompt": "existing_implement"
+    },
+    {
+      "id": "verify-existing",
+      "milestone": "prove",
+      "title": "Prove nothing else broke",
+      "app": "Terminal + Cursor",
+      "action": "inspect"
+    },
+    {
+      "id": "secure-existing",
+      "milestone": "prove",
+      "title": "Run the security gate",
+      "app": "Terminal + Cursor",
+      "prompt": "security_review"
+    },
+    {
+      "id": "ship-existing",
+      "milestone": "launch",
+      "title": "Review and ship",
+      "app": "GitHub",
+      "action": "ship"
+    }
+  ]
+}
